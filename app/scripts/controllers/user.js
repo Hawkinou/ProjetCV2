@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc function
- * @name projetCv2App.controller:AboutCtrl
+ * @name projetCv2App.controller:UserCtrl
  * @description
- * # AboutCtrl
+ * # UserCtrl
  * Controller of the projetCv2App
  */
 
 angular.module('projetCv2App')
-  .controller('AboutCtrl', ['$scope', '$http', '$routeParams', 'commandCV', function ($scope, $http, $routeParams, commandCV) {
+  .controller('UserCtrl', ['$scope', '$http', '$routeParams', 'commandCV', function ($scope, $http, $routeParams, commandCV) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
