@@ -27,16 +27,21 @@ angular
         templateUrl: 'views/userList.html',
         controller: 'UserCtrl'
       })
-	  .when('/about/:userId', {
+
+	    .when('/update', {
+        templateUrl: 'views/updateList.html',
+        controller: 'UserCtrl'
+      })
+	    .when('/create', {
+        templateUrl: 'views/createUser.html',
+        controller: 'CreateCtrl'
+      })
+      .when('/update/:userId', {
+        templateUrl: 'views/updateUser.html',
+        controller: 'UpdateCtrl'
+      })
+      .when('/userList/:userId', {
         templateUrl: 'views/userInfo.html',
-        controller: 'UserCtrl'
-      })
-	  .when('/update', {
-        templateUrl: 'views/userList.html',
-        controller: 'UserCtrl'
-      })
-	  .when('/create', {
-        templateUrl: 'views/userList.html',
         controller: 'UserCtrl'
       })
       .otherwise({

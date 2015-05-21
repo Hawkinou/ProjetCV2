@@ -1,0 +1,61 @@
+<div class="jumbotron">
+  <section class="row">
+    <div class="col-xs-8"><h1>{{currentUser.surname}} {{currentUser.name}}</h1></div>
+  </section>
+</div>
+<section class="row">
+  <ul>
+    <span class="ad glyphicon glyphicon-home"></span>  {{currentUser.adress}}<br/>
+    <span class="glyphicon glyphicon-sunglasses"></span>  {{currentUser.email}}<br/>
+    <span class="glyphicon glyphicon-phone"></span>  {{currentUser.numberPhone}}</li><br/>
+    <span class="glyphicon glyphicon-plane"></span>   {{currentUser.website}}</li><br/>
+  </ul>
+</section>
+<div class="row">
+
+  <h3>Formation :</h3>
+  <div class="row" ng-repeat="etab in userFormation">
+    <h4>{{etab.title}} : <small>{{etab.year}}</small></h4><br/>
+    <p class= "col-xs-8">{{etab.description}}</p>
+  </div>
+</div>
+<div class="row">
+  <h3>Competence :</h3>
+  <div class="row" ng-repeat="skill in userSkill">
+    <h4>{{skill.name}}</h4>
+    <div ng-init="getCompet(skill)">
+      <div class="chosure col-xs-6" ng-repeat="info in skillCompet">
+        <h5>{{info.name}}</h5>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: {{info.note}}">
+            <span class="sr-only">{{info.note}} Complete (success)</span>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h3>Experience :</h3>
+
+  <div class="row" ng-repeat="proj in userExp">
+    <h4>{{proj.title}}
+      <small>
+        {{proj.year}}</small></h4>
+    <p class= "col-xs-8">{{proj.description}}</p>
+  </div>
+</div>
+
+
+<div class="row">
+  <h3>Projet réalisé :</h3>
+
+  <div class="row" ng-repeat="proj in userProject">
+    <h4>{{proj.title}}
+      <small>
+        {{proj.year}}</small></h4>
+    <p class= "col-xs-8">{{proj.description}}</p>
+
+  </div>
+
+</div>

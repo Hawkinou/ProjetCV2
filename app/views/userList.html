@@ -1,8 +1,8 @@
 <div>
 <h3>Liste des utilisateurs:</h3>
 <ul>
-
-<div ng-repeat="user in users"> <button ng-click="getName('titi')">{{user.name}}, {{user.surname}}</button>
+<div ng-repeat="user in users"> <a ng-href="#/userList/{{user.id}}">-{{user.name}} {{user.surname}}</a>
 </div>
 </ul>
 </div>
+

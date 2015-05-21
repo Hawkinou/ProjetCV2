@@ -1,0 +1,16 @@
+<form name="myForm">
+  <div class="col-xs-6">Prénom :</div><div class="col-xs-6"> <input type="text" ng-model="user.name" required /> (required)</div>
+  <span class="error" ng-show="myForm.input.$error.required">Requis!</span><br />
+
+  <div class="col-xs-6">Nom : </div><div class="col-xs-6"> <input type="text" ng-model="user.surname" required /> (required)</div><br />
+  <span class="error" ng-show="myForm.input.$error.required">Requis!</span><br />
+
+    <div class="col-xs-6">E-mail: </div><div class="col-xs-6"> <input type="email" name="input" ng-model="user.email" /></div>
+  <span class="error" ng-show="myForm.input.$error.email">Email non valide!</span><br />
+      <div class="col-xs-6">Site web :</div><div class="col-xs-6">  <input type="text" ng-model="user.website" /> </div><br />
+        <div class="col-xs-6">Numéro de téléphone: </div><div class="col-xs-6"> <input type="text" ng-model="user.numberPhone" /></div> <br />
+          <div class="col-xs-6">Adresse:</div><div class="col-xs-6"> <input type="text" ng-model="user.adress"/> </div><br />
+
+  <input type="submit" ng-click="createUser(user)" value="Save" />
+</form>
+
